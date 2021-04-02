@@ -15,7 +15,6 @@ def q_equation(a, b, c):
     return (x1, x2)
 
 if __name__ == "__main__":
-
     try:
         a = float(input("Ingrese a: "))
         b = float(input("Ingrese b: "))
@@ -23,12 +22,4 @@ if __name__ == "__main__":
         x1, x2 = q_equation(a, b, c)
         print("x1: {}, x2: {}".format(x1, x2))
     except:
-        print("Only numerical values are allowed")
-
-
-
-
-
-
-
-        
+        print("Only numerical values are allowed")        

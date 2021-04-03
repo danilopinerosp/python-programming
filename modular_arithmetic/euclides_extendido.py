@@ -2,11 +2,11 @@
 
 from coc_resto import coc_resto
 
-def euclides_extentido(a, b):
+def euclides_extendido(a, b):
     """ Retorna el máximo común divisor, alfa y beta haciendo uso del algoritmo
     extendido de Euclides de forma recursiva. """
     if b > a:
-        euclides_extentido(b, a)
+        euclides_extendido(b, a)
     if b == 0:
         alfa = 1
         beta = 0
@@ -14,7 +14,7 @@ def euclides_extentido(a, b):
         return (mcd, alfa, beta)
     else:
         (cociente, resto) = coc_resto(a, b)
-        (mcd_resto, alfa_resto, beta_resto) = euclides_extentido(b, resto)
+        (mcd_resto, alfa_resto, beta_resto) = euclides_extendido(b, resto)
         alfa = beta_resto
         beta = alfa_resto - beta_resto * cociente
         mcd = mcd_resto
@@ -25,6 +25,6 @@ if __name__ == '__main__':
     import sys
     a = int(sys.argv[1])
     b = int(sys.argv[2])
-    (mcd, alfa, beta) = euclides_extentido(a, b)
+    (mcd, alfa, beta) = euclides_extendido(a, b)
     print('mcd: {}, alfa: {}, beta: {}'.format(mcd, alfa, beta))
         

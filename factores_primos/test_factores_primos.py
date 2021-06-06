@@ -28,30 +28,29 @@ class EsPrimoTestCase(unittest.TestCase):
 
 class FactoresPrimosTestCase(unittest.TestCase):
 
-    @unittest.skip('Incompleted')
     def test_factores_primos_0(self):
         resultado = factores_primos(0)
         self.assertEqual([], resultado)
 
-    @unittest.skip('Incompleted')
     def test_factores_primos_1(self):
         resultado = factores_primos(1)
         self.assertEqual([], resultado)
 
-    @unittest.skip('Incompleted')
     def test_factores_primos_2(self):
         resultado = factores_primos(2)
         self.assertEqual([2], resultado)
 
-    @unittest.skip('Incompleted')
     def test_factores_primos_6(self):
         resultado = factores_primos(6)
         self.assertEqual([2, 3], resultado)
 
-    @unittest.skip('Incompleted')
     def test_factores_primos_11(self):
         resultado = factores_primos(11)
         self.assertEqual([11], resultado)
+
+    def test_factores_primos_18(self):
+        resultado = factores_primos(18)
+        self.assertEqual([2, 3, 3], resultado)
 
 if __name__ == "__main__":
     unittest.main()

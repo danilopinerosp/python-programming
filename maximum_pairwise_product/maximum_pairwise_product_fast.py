@@ -8,30 +8,29 @@ def maximum_pairwise_product(numbers):
         raise TypeError('must be list not {}'.format(type(numbers)))    
     if len(numbers) < 2: #Numbers must have len(numbers) greater than 2
         raise IndexError('List has not enough elements')
+    
     # Each item in numbers must be a number
     try:
         [int(i) for i in numbers]
     except ValueError as e:
         raise e
     
-    idx_1 = -1
-    max_1 = float('-inf')
-    idx_2 = -1
-    max_2 = float('-inf')
+    max_idx_1 = -1
+    max_idx_2 = -1
 
     # Select first max number
     for i in range(len(numbers)):
-        if idx_1 == -1 or max_1 < numbers[i]:
-            idx_1 = i
+        if max_idx_1 == -1 or numbers[max_idx_1] < numbers[i]:
+            max_idx_1 = i
             max_1 = numbers[i]
 
     # Select second max number
     for i in range(len(numbers)):
-        if (idx_2 == -1 or max_2 < numbers[i]) and idx_1 != i:
-            idx_2 = i
+        if (max_idx_2 == -1 or numbers[max_idx_2] < numbers[i]) and max_idx_1 != i:
+            max_idx_2 = i
             max_2 = numbers[i]
 
-    return max_1 * max_2
+    return numbers[max_idx_1] * numbers[max_idx_2]
     
 if __name__ == "__main__":
     numbers = input()

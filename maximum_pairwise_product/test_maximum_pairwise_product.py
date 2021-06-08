@@ -28,8 +28,8 @@ class MaximumPairwiseProductTestCase(unittest.TestCase):
     def test_invalid_items(self):
         numbers = [1, 6, 7, 5, 'u', 8]
         with self.assertRaises(ValueError):
-            maximum_pairwise_product(numbers)    
-                        
+            maximum_pairwise_product(numbers)
+
 
 if __name__ == "__main__":
     unittest.main()

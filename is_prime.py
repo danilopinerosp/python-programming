@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
 
 def is_prime(n):
+    """ Returns True is n is prime, False otherwise"""
+    
+    result = True
     if n < 2:
-        return False
+        result = False
     k = 2
-    while k <= n / 2:
+    while k <= n / 2 and result:
         if n % k == 0:
-            return False
+            result = False
         k += 1
-    return True        
+    return result
 
 
 if __name__ == "__main__":

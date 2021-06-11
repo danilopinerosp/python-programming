@@ -22,3 +22,7 @@ def fibonacci_module(n, m):
 
     result = fib_list(n) % m
     return result
+
+if __name__ == "__main__":
+    n, m = map(int, input().split())
+    print(fibonacci_module(n, m))

@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-
 def invertir(number):
     '''Invierte el orden de los digitos de un número entero'''
     result = 0
